@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Details Page</title>
+</head>
+<body>
+    <h2 align="center">Enter Car Details</h2>
+    <form action="read" method="post">
+        {% csrf_token %}
+        <h3 align="center" style="color:green">{{ Msg }}</h3>
+        <table align="center">
+            <tr>
+                <td>Car Name:</td>
+                <td><input type="text" name="txtCarName"></td>
+            </tr>
+            <tr>
+                <td>Car Company:</td>
+                <td><input type="text" name="txtCarCompany"></td>
+            </tr>
+            <tr>
+                <td>Car Model:</td>
+                <td><input type="text" name="txtCarModel"></td>
+            </tr>
+            <tr>
+                <td>Car Price:</td>
+                <td><input type="text" name="txtCarPrice"></td>
+            </tr>
+            <tr>
+                <td>Fuel Type:</td>
+                <td><select name="slFuelType">
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option>XP100 Petrol</option>
+                        <option>Electric</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><input type="submit" name="btnSub"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Data</title>
+</head>
+<body>
+    <h2 align="center">Car Data Given Below</h2>
+    <table align="center" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Car Name</th>
+            <th>Car Company</th>
+            <th>Car Model</th>
+            <th>Car Price</th>
+            <th>Fuel Type</th>
+        </tr>
+        {% for i in Data %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.c_name }}</td>
+                <td>{{ i.c_company }}</td>
+                <td>{{ i.c_model }}</td>
+                <td>{{ i.c_price }}</td>
+                <td>{{ i.c_fueltype }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
